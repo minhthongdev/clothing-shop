@@ -1,0 +1,296 @@
+/* global */
+*{
+    overflow-x: hidden;
+}
+
+html,body{
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+/* có bootstrap nên kh cần khai báo margin 0 padding 0, box-sizing */
+
+
+/* header */
+header .menu__content{
+    padding: 0;
+    margin: 0;
+}
+.info__content{
+    margin-bottom: 0;
+}
+.carousel-control-prev-icon, .carousel-control-next-icon{
+    /* color: violet; */
+    width: 50px;
+    height: 40px;
+}
+
+
+/*  làm cho header luôn theo */
+header{
+    background-color: #000000;
+    padding: 5px 20px;
+    /* position: absolute; */
+    position: fixed;
+    z-index: 10000;
+    width: 100%;
+    /* top: 20px; */
+    /* left: 50%; */
+    /* transform: translateX(-50%); */
+}
+
+.navbar-brand img{
+    height: 60px;
+    width: 100px;
+    background-color: black;
+    background-size: cover;
+    background-position: center;
+}
+
+.header__content #grimmNavbar .navbar-nav{
+    margin-left: 350px;
+    border-bottom: 2px solid rgba(255, 255, 255, .2);
+}
+
+#grimmNavbar .navbar-nav .nav-item{
+    /* margin-left: 40px; */
+    padding: 0 16px;
+}
+
+#grimmNavbar .navbar-nav .nav-item .a{
+    color: #fff;
+}
+
+#grimmNavbar .navbar-nav .nav-item::after{
+    content: "";
+    /* chưa rê chuột nên width 0 */
+    width: 0;
+    height: 3px;
+    display: block;
+    /* màu trải */
+    background: linear-gradient(to right, #fff, #ffffff);
+    transition: all 0.5s;
+}
+
+#grimmNavbar .navbar-nav .nav-item:hover::after{
+    width: 100%;  
+}
+
+#grimmNavbar .navbar-nav .nav-item.active::after{
+    width: 100%;
+}
+
+
+/* carousel */
+#Carousel .carousel-item .carousel-caption{
+    text-align: left;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-10%); 
+    /* Căn giữa thuộc tính theo pp translate */
+}
+
+#Carousel .carousel-indicators li {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 2px solid white;
+    opacity: 1;
+    background-clip: border-box;
+}
+
+#Carousel .carousel-indicators li.active{
+    background-color: white;
+}
+
+
+#Carousel .carousel-indicators{
+    justify-content: flex-start;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-right: 0;
+    margin-left: 0;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.carousel-inner .carousel-item .carousel-caption p{
+    color: #fbbd61;
+}
+.carousel-inner .carousel-item .carousel-caption h2{
+    font-size: 52px;
+    font-weight: 300;
+    padding: 0;
+   
+    letter-spacing: 3px;
+    /* opacity: 0; */
+    color: #fff;
+    border: none;
+}
+.carousel-inner .carousel-item .carousel-caption h3{
+    font-size: 18px;
+    color: #fff;
+}
+
+.marterial__icon{
+    position: relative;
+    z-index: 1;
+    display: inline-flex;
+    vertical-align: middle;
+    color: #fff;
+}
+.carousel__trailer_banner .button,.carousel__trailer button{
+    position: relative;
+    z-index: 1;
+    /* color: #fff; */
+}
+.carousel__trailer_banner .button__icon, .carousel__trailer .button__icon{
+    cursor: pointer;
+    /* color: #ec7532; */
+    outline: none;
+    box-shadow: none;
+    
+    font-size: 13px;
+    font-weight: normal;
+    position: relative;
+    overflow: hidden;
+    width: auto;
+    padding: 12px 16px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #000000;
+    font-weight: 500;
+    border-width: 2px;
+    border-radius: 30px;
+
+    border: none;
+    background-image: linear-gradient(to right, #fff, #ffffff)
+}
+.carousel__trailer_banner .button__icon:hover, .carousel__trailer .button__icon:hover{
+    background-image: linear-gradient(to right, wheat, #fff);
+    font-weight: 550;
+}
+
+
+/* Banner */
+.bannertop__item{
+    margin-top: 40px;
+    /* height: 800px; */
+    /* width: auto; */
+    /* height: 100%; */
+}
+.bannertop__item img{
+    /* object-fit: cover; */
+    /* height: 831px; */
+    width: 100%;
+    /* width: 1477px; */
+    vertical-align: middle;
+    max-width: 100%;
+    /* height: 100%; */
+}
+
+.bannertop__text{
+    text-align: left;
+    top: 50%;
+    left: 50%;
+    transform: translate(10%,-150%);
+}
+
+.bannertop__text h2{
+    color: #fff;
+}
+.bannertop__text h5{
+    color: white;
+}
+
+
+/* gellery */
+.home__gallery{
+    background-color: #000000;
+    margin-bottom: 30px;
+    height: 700px;
+    /* background: #000; */
+}
+.gallery__text h2{
+    color: white;
+    padding-top: 20px;
+    font-weight: 500;
+}
+.gallery__text h5{
+    color: white;
+    font-weight: 200;
+}
+.galerry__content{
+    background: url(//theme.hstatic.net/1000357687/1000521705/14/home_gallery_bg.png?v=107) no-repeat;
+    height: 400px;
+    background-attachment: fixed;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.play__button{
+    color: white;
+}
+
+
+.carousel__video a:hover{
+    
+    font-size: 22px;
+}
+
+
+
+
+
+@media only screen and (max-width:600px){
+    .Carousel{
+        margin-top: 70px;
+        /* height: 250px;   */
+        /* opacity: 0.5; */
+       /* display: none; */
+    }
+    .bannertop__content{
+        margin-bottom: 30px;
+    }
+    .bannertop__text h2, .bannertop__text h5{
+        display: none;
+    }
+    .carousel__trailer_banner{
+        
+        /* text-align: center; */
+        margin-left: 144px;
+    }
+   
+   
+    .button__icon i {
+        display: none;
+    }
+    
+      
+        .carousel__content   .carousel__video a img{
+            display: none;
+
+        }
+    
+        .carousel__content   .carousel__video a i{
+            opacity: 1;
+        }
+    
+   .home__gallery h2, .home__gallery h5{
+       font-size: 12px;
+   }
+   .carousel__video{
+       display: none;
+   }
+  
+   header .menu__content #grimmNavbar li a{
+       display: block;
+       width: 180px;
+   }
+    
+}
